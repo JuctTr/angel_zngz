@@ -20,12 +20,12 @@
       <div class="col-md-8 centerBox">
         <!-- 登录注册选择卡Tabs标题 -->
         <ul id="register_login_tab" class="nav nav-tabs">
-          <li><a href="#login" data-toggle="tab">登录</a></li>
-          <li class="active"><a href="#register" data-toggle="tab">注册</a></li>
+          <li class="active"><a href="#login" data-toggle="tab">登录</a></li>
+          <li><a href="#register" data-toggle="tab">注册</a></li>
         </ul>
         <div id="register_login_Content" class="tab-content">
           <!-- 登录input -->
-          <div class="tab-pane fade" id="login">
+          <div class="tab-pane fade in active" id="login">
             <form class="form-horizontal" id="login_form" method="POST">
               <div class="form-group">
                 <label for="username" class="col-sm-2 control-label">用户名：</label>
@@ -46,7 +46,7 @@
               </div>
             </form>
           </div>
-          <div class="tab-pane fade in active" id="register">
+          <div class="tab-pane fade" id="register">
             <!-- 注册input -->
             <form class="form-horizontal" id="register_form" method="POST">
               <div class="form-group">
