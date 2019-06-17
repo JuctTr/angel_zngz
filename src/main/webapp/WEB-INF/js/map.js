@@ -57,6 +57,5 @@ ZoomControl.prototype.initialize = function (map) {
 var myZoomCtrl = new ZoomControl();
 // 添加到地图当中    
 map.addControl(myZoomCtrl);
-
 // 向地图中添加标注
 
