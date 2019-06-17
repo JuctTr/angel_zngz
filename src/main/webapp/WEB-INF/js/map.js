@@ -6,6 +6,18 @@ map.addControl(new BMap.ScaleControl()); //	默认位于地图左下方，显示
 map.addControl(new BMap.OverviewMapControl()); //默认位于地图右下方，是一个可折叠的缩略地图
 map.addControl(new BMap.MapTypeControl()); //地图类型,默认位于地图右上方
 map.setCurrentCity("广州"); // 仅当设置城市信息时，MapTypeControl的切换功能才能可用
+
+function theLocation(){
+	var longitude = $("#longitude").val();
+	var latitude = $("#latitude").val();
+  if(longitude !== "" && latitude !== "" ){
+		map.clearOverlays();
+		var new_point = new BMap.Point(longitude, latitude);
+		var marker = new BMap.Marker(new_point);
+		map.addOverlay(marker);
+		map.panTo(new_point);
+	}
+}
 // 1、定义一个自定义控件的构造函数并继承Control
 // 定义一个控件类，即function    
 function ZoomControl() {
@@ -28,8 +40,9 @@ ZoomControl.prototype.initialize = function (map) {
     div.style.cursor = "pointer";
     div.style.border = "1px solid gray";
     div.style.backgroundColor = "white";
-    div.style.borderRadius = "5px";
-    div.style.boxShadow = "0 5px 4px red";
+    div.style.borderRadius = "10px";
+    div.style.boxShadow = "0 5px 4px black";
+    div.style.padding = "10px"
     // 绑定事件，点击一次放大两级    
     div.onclick = function (e) {
         map.zoomTo(map.getZoom() + 2);
@@ -45,18 +58,5 @@ var myZoomCtrl = new ZoomControl();
 // 添加到地图当中    
 map.addControl(myZoomCtrl);
 
+// 向地图中添加标注
 
-//封装一个代替getElementById()的方法
-// function byId(id) {
-//     return typeof (id) === "string" ? document.getElementById(id) : id;
-// }
-// 用经纬度设置地图中心点
-// function theLocation() {
-//     if (byId("longitude").value != "" && byId("latitude").value != "") {
-//         map.clearOverlays();
-//         var new_point = new BMap.Point(byId("longitude").value, byId("latitude").value);
-//         var marker = new BMap.Marker(new_point); // 创建标注
-//         map.addOverlay(marker); // 将标注添加到地图中
-//         map.panTo(new_point);
-//     }
-// }

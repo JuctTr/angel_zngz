@@ -71,4 +71,13 @@ public class UserController {
 	public String registerPage() {
 		return "pages/login_register";
 	}
+	@RequestMapping(value="/mapPage")
+	public String mapPage() {
+		return "pages/map";
+	}
+	@RequestMapping(value="/locationPage")
+	public String locationPage() {
+		return "pages/location";
+	}
+	
 }

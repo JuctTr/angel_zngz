@@ -5,14 +5,57 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
     <title>定位地图</title>
     <style>
-        html{height: 100%;}
-        body{height: 100%;margin: 0;padding: 0;}
-        #container{height: 100%;}
+			html{height: 100%;}
+			body{height: 100%;margin: 0;padding: 0; position: relative;}
+			#container{width:60%;height: 100%;}
+			#inquireBox{
+				float: right;
+				height: 10rem;
+				position: absolute;
+				top: calc(50% - 5rem);
+				right: 0;
+			}
+			.inputBox{
+				height: 50%;
+				line-height: 5rem;
+			}
+			.inputBox input{
+				line-height: 30px;
+    		vertical-align: middle;	
+			}
+			.inquireBtn{
+				height: 50%;
+				line-height: 5rem;
+				text-align: center;
+			}
+			.inquireBtn button{
+				padding: 0.5rem 1rem;	
+				margin: 0 2rem;
+				vertical-align: middle;
+				color: #fff;
+				border: none;
+				border-radius: 20px;
+				background: linear-gradient(to right, #44acf1 0, #1c10bd 100%);
+				font-size: 18px;
+				cursor: pointer;
+				box-shadow: 3px 3px #999;
+			}
     </style>
 </head>
 <body>
+		<div id="inquireBox">
+			<div class="inputBox">
+				经度：<input type="text" id="longitude" name="longitude">
+				纬度：<input type="text" id="latitude" name="latitude">
+			</div>
+			<div class="inquireBtn">
+				<button type="button" onclick="getLocation()">获取经纬度</button>
+				<button type="button" onclick="theLocation()">查询地点</button>
+			</div>
+		</div>
     <div id="container"></div>
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=Axt4hgfdw0WIta395Xh11WlaEa1NZyNu"></script>
+    <script src="../js/jquery-1.12.4.min.js"></script>
     <script src="../js/map.js"></script>
 </body>
 </html>

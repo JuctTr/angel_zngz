@@ -1,17 +1,73 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>使用iframe</title>
-    <style>
-        iframe{
-            width: 500px;
-            height: 500px;
-        }
-    </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>定位信息页面</title>
+	<!-- Bootstrap -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+	<!--[if lt IE 9]>
+		<script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../css/index.css">
+	<style>
+		.inquireLocation{
+			margin-top: 10rem;
+		}
+	</style>
 </head>
-<body style="background: red;">
-    <iframe src="https://www.baidu.com" frameborder="0"></iframe>
+<body>
+	<!-- 导航栏 -->
+	<div id="navigation">
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index">
+							<img alt="logo" src="../images/crutches.png">
+					</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="index">首页</a></li>
+						<li><a href="#project">项目进展</a></li>
+						<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">产品介绍 <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+										<li><a href="#">Angle普及型</a></li>
+										<li><a href="#">Angle健康型</a></li>
+										<li><a href="#">Angle-Plus</a></li>
+								</ul>
+						</li>
+						<li><a href="#contact">关于我们</a></li>
+						<li><a href="locationPage">定位地图</a></li>
+					</ul>
+					<!-- 登录注册按钮 -->
+					<div class="navbar-right">
+						<button type="button" class="btn btn-default" data-toggle="modal" data-target=".bs-example-modal-sm">
+							<span class="glyphicon glyphicon-user" aria-hidden="true"></span><a href="registerPage">登录/注册</a></button>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<div class="container-fluid">
+		<div class="row inquireLocation">
+				<iframe src="mapPage" frameborder="0" style="width: 100%;height: 65%;padding: 0 10rem;"></iframe>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
 </body>
 </html>
