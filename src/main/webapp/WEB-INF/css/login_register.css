@@ -39,3 +39,9 @@ body{
 #register_login_tab>li a{
   font-size: 2rem;
 }
+/*当设备屏幕大小 < 1000px 的时候加载一下样式*/
+@media only screen and (max-width: 62.5em){
+  .centerBox{
+    padding-bottom: 1rem;
+  }
+}
