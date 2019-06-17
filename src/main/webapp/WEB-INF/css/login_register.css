@@ -1,0 +1,41 @@
+body{
+  background-image: url(../images/adventure-beautiful-dawn.jpg);
+  background-size:  100% 100%;
+}
+.container{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pageCenter{
+  flex: 4;
+}
+.centerBox{
+  background: #fff;
+  opacity: 0.9;
+  /* border-radius: 10px; */
+}
+/* 错误样式 */
+.error{
+  color: red;
+  line-height: 32px;
+}
+#register_login_Content{
+  margin-top: 2rem;
+}
+.form-group input{
+  padding: 0 4rem 0 2rem;
+}
+#validateBtn{
+  width: 100%;
+}
+#resetBtn{
+  width: 100%;
+}
+#loginBtn{
+  width: 100%;
+}
+#register_login_tab>li a{
+  font-size: 2rem;
+}

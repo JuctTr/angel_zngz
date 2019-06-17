@@ -1,0 +1,52 @@
+#navigation{
+  margin-top: 50px;
+}
+.navbar-header>.navbar-brand{
+  padding: 0;
+}
+.navbar-header>.navbar-brand>img{
+  width: 158px;
+}
+#navigation>.navbar .navbar-right>.btn{
+  margin-top: 9px;
+  letter-spacing: 0.4rem;
+}
+/* 登录注册模态框 */
+.modal{
+  top: calc(50% - 250px);
+}
+.modal .modal-content .modal-header{
+ border-bottom: none;
+}
+.modal .modal-content{
+  /* width: 57.14rem; */
+}
+.modal-content{
+    padding: 20px;
+}
+#register_login_tab>li a{
+  font-size: 2rem;
+  padding: 10px 30px;
+}
+#login form .btn{
+  width: 100%;
+}
+#register form .btn{
+  width: 100%;
+}
+.nav-tabs li.bv-tab-error>a{
+  color: #555;
+}
+/*当 设备屏幕大小 < 480px(30em) 的时候加载一下样式*/
+@media only screen and (max-width: 30em) {
+
+}
+/*当480px < 设备屏幕大小 < 767px 的时候加载一下样式*/
+@media only screen and (min-width: 30em) and (max-width: 47.9375em){
+
+}
+@media only screen and (min-width: 48em) {
+  .modal>.modal-sm{
+    width: 500px;
+  }
+}
